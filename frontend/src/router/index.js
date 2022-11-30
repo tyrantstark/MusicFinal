@@ -41,11 +41,7 @@ Vue.use(VueRouter)
     name: 'Profile',
     component: Profile
   },
-  {
-    path: 'profile',
-    name: 'Profile',
-    component: Profile
-  },
+  
   {
     path: '/users',
     name: 'Profiles',
@@ -81,10 +77,10 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
   mode: 'history',
-  base: process.env.BASE_URL,
+  base: '/',
   routes
 })
-bn  
+
 router.beforeEach((to, from, next) => {
   if (to.name !== 'Login' 
   && to.name !== 'Register' 
