@@ -84,7 +84,7 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
-
+bn  
 router.beforeEach((to, from, next) => {
   if (to.name !== 'Login' 
   && to.name !== 'Register' 
