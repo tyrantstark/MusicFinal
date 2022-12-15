@@ -121,6 +121,7 @@ router.patch('/profile', auth, async (req, res) => {
 
 router.post('/profile/avatar', auth, upload.single('avatar'), async (req ,res) => {
 
+    console.log(req.body);
     try {
         const profile = await Profile.findOne({owner : req.user._id})
 
