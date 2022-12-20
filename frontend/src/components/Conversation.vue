@@ -10,7 +10,7 @@
           <p class="message_date">{{ message.createdAt }}</p>
          </div>
           <p>{{ message.message }}</p>
-          <ion-icon style="cursor:pointer;margin-top:1rem;font-size:2.5rem"  v-if="message.file" @click="playPauseSong" v-bind:data-source="$api + '/message/' + message._id + '/file'" name="play"></ion-icon>
+          <ion-icon style="cursor:pointer;margin-top:1rem;font-size:2.5rem"  v-if="message.file" @click="playPauseSong" v-bind:data-source="'/message/' + message._id + '/file'" name="play"></ion-icon>
       </div>
     </div>
   </div>

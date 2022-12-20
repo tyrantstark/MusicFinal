@@ -22,7 +22,7 @@
             
         </div>
            <div v-if="getSong.owner.profile" class="author_container">
-                <img  class="author_image" v-bind:src="$api + '/profile/' + getSong.owner.profile[0]._id + '/avatar'" >
+                <img  class="author_image" v-bind:src="'/profile/' + getSong.owner.profile[0]._id + '/avatar'" >
                 <div class="author_description-container">
                 <h2 class="author_heading">Description</h2>
                 <p class="author_description">{{ getSong.description }}</p>

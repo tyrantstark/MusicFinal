@@ -3,7 +3,7 @@
     <div class="playing_song-info">
       <img v-if="getPlayingSongObject != {}"
         style="width: 10rem; border-radius: 0.7rem"
-        :src="$api + '/song/' + getPlayingSongObject._id + '/image'"
+        :src="'/song/' + getPlayingSongObject._id + '/image'"
         alt=""
       />
          <h1 style="margin-right:2rem" v-if="getPlayingSongObject != {}">

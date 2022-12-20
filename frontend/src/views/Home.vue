@@ -10,7 +10,7 @@
       >
         <img
           class="song_image"
-          v-bind:src="$api + '/song/' + song._id + '/image'"
+          v-bind:src="'/song/' + song._id + '/image'"
         />
         <h2 class="song_title">{{ song.title }}</h2>
         <h2 class="song_genre">{{ song.genre }}</h2>

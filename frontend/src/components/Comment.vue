@@ -3,7 +3,7 @@
       <h2 class="comment_section-heading">Comments</h2>
     
       <div class="insert_comment" v-if="isLoggedIn">
-         <img class="insert_comment-img" v-bind:src="$api + '/profile/' + getMyProfile._id + '/avatar'" >
+         <img class="insert_comment-img" v-bind:src="'/profile/' + getMyProfile._id + '/avatar'" >
          <form @submit.prevent="insertComment"  class="insert_comment-form">
             <input type="text" id="input" v-model="comment" class="insert_comment-input" placeholder="Insert your comment">
             <button class="insert_comment-btn">Create</button>
@@ -14,7 +14,7 @@
     <div class="comments">
             <Loader v-if="getComments.length != 0" />
     <div v-for="comment in getComments" :key="comment._id" class="comment">
-        <img class="comment_img" v-bind:src="$api + '/profile/' + comment.owner.profile[0]._id + '/avatar'" >
+        <img class="comment_img" v-bind:src="'/profile/' + comment.owner.profile[0]._id + '/avatar'" >
         <div class="comment_content">
           <div class="comment_info">
             <h2 class="comment_author">{{ comment.owner.name }}</h2>

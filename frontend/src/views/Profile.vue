@@ -4,7 +4,7 @@
       <div class="profile_container">
       <div class="profile">
           <div class="profile_avatar-container">
-            <img :src=" $api + '/profile/' + getProfile._id + '/avatar'" class="profile_avatar"/>
+            <img :src="'/profile/' + getProfile._id + '/avatar'" class="profile_avatar"/>
              <input class="profile_avatar-change" id="avatar-img" v-if="$store.getters.isAuthenticated" type="file" @change="uploadImage">
              <label class="profile_avatar-btn" for="avatar-img">Change avatar</label>
           </div>
@@ -28,7 +28,7 @@
       <h2 class="profile_title">Latest uploads</h2>
       <div v-if="getProfileSongs.length != 0" class="latest_songs-container">
         <router-link v-bind:to="'/song/' + song._id" tag="div" v-for="song in getProfileSongs" :key="song._id" class="song">
-            <img class="song_image" v-bind:src="$api + '/song/' + song._id + '/image'" >
+            <img class="song_image" v-bind:src="'/song/' + song._id + '/image'" >
             <h2 class="song_title">{{ song.title }}</h2>
             <h2 class="song_genre">{{ song.genre }}</h2>
         </router-link>
@@ -81,7 +81,7 @@
             </div>
             <div class="modal_box modal_box-send">
                 <div class="recipient_info">
-                    <img class="recipient_info-image" :src="'http://localhost:3000/api/profile/' + getProfile._id + '/avatar'" alt="">
+                    <img class="recipient_info-image" :src="'http://localhost:8080/profile/' + getProfile._id + '/avatar'" alt="">
                 </div>
                 <div v-if="getProfile.owner" class="send_message">
                     <h2 class="recipient_name">Send a message to {{ getProfile.owner.name }}</h2>

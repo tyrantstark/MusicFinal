@@ -5,7 +5,7 @@
       <Loader v-if="getProfiles[0].owner" />
     <router-link :to="'profile/' + profile._id" tag="div" v-for="profile in getProfiles" :key="profile._id">
     <div class="profile" v-if="profile.owner != null">
-        <img class="profile_avatar" :src="$api + '/profile/' + profile._id + '/avatar'" alt="">
+        <img class="profile_avatar" :src="'/profile/' + profile._id + '/avatar'" alt="">
         <h1 v-if="profile.owner" class="profile_name">{{ profile.owner.name }}</h1>
         <p v-if="profile.owner" class="profile_type">{{ profile.owner.type }}</p>
     </div>

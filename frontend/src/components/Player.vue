@@ -2,13 +2,13 @@
   <div>
     <img
       class="player-background"
-      :src="$api + '/song/' + $route.params.id + '/image'"
+      :src="'/song/' + $route.params.id + '/image'"
       alt=""
     />
     <div class="player-buttons">
       <div
         @click.capture="playSong"
-        v-bind:data-source="$api + '/song/' + $route.params.id + '/songFile'"
+        v-bind:data-source="'/song/' + $route.params.id + '/songFile'"
         class="player-play player-button"
       >
         <ion-icon

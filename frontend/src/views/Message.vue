@@ -14,11 +14,11 @@
             class="conversation_img"
             v-bind:src="
               getMyProfile._id === conversation.sender.profile[0]._id
-                ? $api +
+                ?
                   '/profile/' +
                   conversation.recipient.profile[0]._id +
                   '/avatar'
-                : $api +
+                :
                   '/profile/' +
                   conversation.sender.profile[0]._id +
                   '/avatar'

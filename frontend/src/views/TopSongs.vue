@@ -4,7 +4,7 @@
       <h2 class="heading_section">Most popular tracks</h2>
     <div v-if="top_songs" class="songs">
      <router-link v-bind:to="'/song/' + song._id" tag="div" v-for="song in top_songs" :key="song._id" class="song">
-        <img class="song_image" v-bind:src="$api + '/song/' + song._id + '/image'" >
+        <img class="song_image" v-bind:src="'/song/' + song._id + '/image'" >
         <h2 class="song_title">{{ song.title }}</h2>
         <h2 class="song_genre">{{ song.genre }}</h2>
      </router-link>
