@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex,{Store} from 'vuex'
-//import Store from 'vuex'
+
 import auth from './auth'
 import profile from './profile'
 import song from './song'

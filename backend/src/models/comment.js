@@ -10,10 +10,7 @@ const commentSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    // createdAt : {
-    //      type: Date,
-    //      required: true
-    //     },
+    
     owner: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,

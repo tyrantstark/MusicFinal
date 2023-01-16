@@ -3,7 +3,7 @@ const path = require('path')
 require('dotenv').config({ path: './.env'});
 const  env  = require("process");
 
-//Routers
+
 const userRouter = require('./routers/user')
 const profileRouter = require('./routers/profile')
 const songRouter = require('./routers/song')
@@ -12,11 +12,11 @@ const commentRouter = require('./routers/comment')
 const messageRouter = require('./routers/message')
 const conversationRouter = require('./routers/conversation')
 
-//Cors for localhost
+
 const cors = require('cors')
 const history = require('connect-history-api-fallback')
 
-// Mongoose
+
 require('./db/mongoose')
 const app = express()
 
@@ -57,7 +57,7 @@ app.use(likeRouter)
 app.use(commentRouter)
 app.use(messageRouter)
 app.use(conversationRouter)
-//console.log(process.env.JWT_SECRET);
+
 app.listen(port, () => {
     console.log(`Server is up on ${port}`)
 })

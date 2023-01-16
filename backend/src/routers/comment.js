@@ -11,7 +11,7 @@ router.post('/song/:id/comment', auth, async (req,res) => {
         song : req.params.id,
         comment: req.body.comment,
         owner: req.user._id,
-        // createdAt : req.body.createdAt
+        
     })
 
     try {
@@ -20,7 +20,7 @@ router.post('/song/:id/comment', auth, async (req,res) => {
             return res.status(201).send(doc)
         })
 
-        // res.status(201).send(comment)
+        
 
     } catch (e) {
         res.status(400).send(e.message)
