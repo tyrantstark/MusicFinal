@@ -11,7 +11,7 @@ router.post('/register', async (req, res) => {
         })
 
     try {
-        await uplicuser.checkDates(user.username,user.email)
+        await user.checkDuplicates(user.username,user.email)
         const token = await user.generateAuthToken()
         await user.save()
         await profile.save()
